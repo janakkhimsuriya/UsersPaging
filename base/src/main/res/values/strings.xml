@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="todo">Todo</string>
+    <string name="button_ok">OK</string>
+
+    <string name="title_internet">No Internet Connection</string>
+    <string name="error_message_internet">Network Not Available!</string>
+    <string name="error_message_network_not_available">No Internet Connection Found!! Please Try Later on with Internet Connection.</string>
+    <string name="error_message_common">Oops, Something went wrong!</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.screens.splash.SplashActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataModel"
+            type="com.base.state.NetworkState" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_retry"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:src="@drawable/ic_refresh"
+            android:visibility="@{dataModel.getStatus() == dataModel.Status.FAILED ? View.VISIBLE :View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/error_msg"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/error_msg"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@{dataModel.message}"
+            android:textSize="@dimen/dimen_16sp"
+            android:visibility="@{dataModel.getStatus() == dataModel.Status.FAILED ? View.VISIBLE :View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_retry"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/error_message_internet" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{dataModel.status == dataModel.Status.RUNNING ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

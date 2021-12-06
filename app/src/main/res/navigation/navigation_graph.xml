@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragment_dashboard">
+
+    <fragment
+        android:id="@+id/fragment_dashboard"
+        android:name="com.practicle.techflitter.presentation.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_home_to_user_detail"
+            app:destination="@id/fragment_user_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_user_detail"
+        android:name="com.practicle.techflitter.presentation.detail.UserDetailFragment"
+        android:label="UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail" />
+
+</navigation>

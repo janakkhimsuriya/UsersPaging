@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Techflitter</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="total_users">Total Users</string>
+    <string name="total_pages">Total Pages</string>
+    <string name="current_page">Current Page</string>
+    <string name="page_limit">Page Limit</string>
+    <string name="profile">Profile</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="todo">TODO</string>
+
+    <string name="create">CREATE</string>
+
+    <string name="status">Status</string>
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="error_message_name">Please enter user name.</string>
+    <string name="error_message_email_empty">Please enter email.</string>
+    <string name="error_message_email_invalid">Please enter valid email.</string>
+    <string name="error_message_gender">Please select gender.</string>
+    <string name="error_message_status">Please select status.</string>
+    <string name="error_message_user_exist">Email already in use.</string>
+    <string name="error_message_common">Something went wrong.</string>
+    <string name="sort">Sort by</string>
+</resources>

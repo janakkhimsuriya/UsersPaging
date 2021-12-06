@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.practicle.techflitter.presentation.meta.MetaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="@dimen/dimen_20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title_total_users"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_line"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@string/total_users"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_line"
+            android:gravity="end"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@{String.valueOf(viewModel.meta.total)}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/total_users" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title_total_pages"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:background="@drawable/bg_bottom_line"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@string/total_pages"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_total_users" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_pages"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_line"
+            android:gravity="end"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@{String.valueOf(viewModel.meta.pages)}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_total_pages"
+            tools:text="@string/total_pages" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title_current_page"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:background="@drawable/bg_bottom_line"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@string/current_page"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_total_pages" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_current_page"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_line"
+            android:gravity="end"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@{String.valueOf(viewModel.meta.page)}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_current_page"
+            tools:text="@string/current_page" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title_page_limit"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:background="@drawable/bg_bottom_line"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@string/page_limit"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_current_page" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_page_limit"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_line"
+            android:gravity="end"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:text="@{String.valueOf(viewModel.meta.limit)}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_page_limit"
+            tools:text="@string/current_page" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
